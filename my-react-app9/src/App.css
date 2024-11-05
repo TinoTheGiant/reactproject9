@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Container styling */
+body {
+  background-color: #072100;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #B9F398;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #072100;
+  background-color: #B9F398;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+
+button:hover {
+  background-color: #9DD67E;
+}
+
+
+button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(185, 243, 152, 0.5);
+}
+
+
+button:active {
+  background-color: #9DD67E;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+button:active::after {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Disabled state */
+button:disabled {
+  background-color: #B9F398;
+  color: rgba(7, 33, 0, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
